@@ -1,9 +1,6 @@
 package br.com.zup.LeadCollectorSecurity.usuario;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
 import java.util.UUID;
 
 @Entity
@@ -12,7 +9,9 @@ public class Usuario {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private UUID id;
+    @Column(nullable = false,unique = true)
     private String email;
+    @Column(nullable = false)
     private String senha;
 
 
