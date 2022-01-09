@@ -7,6 +7,6 @@ import java.util.UUID;
 
 public interface UsuarioRepository extends CrudRepository<Usuario, UUID> {
 
-    Optional<Usuario> findByEmail();
+    Optional<Usuario> findByEmail(String email);
 
 }

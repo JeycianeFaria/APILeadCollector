@@ -15,7 +15,7 @@ public class JWTComponent {
 
     @Value("${jwt.segredo}")
     private String segredo;
-    @Value("${jwt.milissegudos}")
+    @Value("${jwt.milissegundos}")
     private Long milissegundo;
 
     public String gerarToken(String username, UUID id) {
