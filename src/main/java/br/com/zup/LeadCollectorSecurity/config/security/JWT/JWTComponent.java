@@ -18,7 +18,7 @@ public class JWTComponent {
     @Value("${jwt.milissegundos}")
     private Long milissegundo;
 
-    public String gerarToken(String username, UUID id) {
+    public String gerarToken(String username, String id) {
         Date vencimento = new Date(System.currentTimeMillis() + milissegundo);
 
         String token = Jwts.builder().setSubject(username)
